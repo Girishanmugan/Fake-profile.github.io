@@ -30,15 +30,15 @@
 
             const inputData = {
                 name: document.getElementById('name').value,
-                statuses_count: document.getElementById('statuses_count').value,
-                followers_count: document.getElementById('followers_count').value,
-                friends_count: document.getElementById('friends_count').value,
-                favourites_count: document.getElementById('favourites_count').value,
-                listed_count: document.getElementById('listed_count').value
+                statuses_count: parseInt(document.getElementById('statuses_count').value),
+                followers_count: parseInt(document.getElementById('followers_count').value),
+                friends_count: parseInt(document.getElementById('friends_count').value),
+                favourites_count: parseInt(document.getElementById('favourites_count').value),
+                listed_count: parseInt(document.getElementById('listed_count').value)
             };
 
             try {
-                const response = await fetch('https://9d60-2401-4900-6061-2677-4866-fb21-3fcd-f882.ngrok-free.app/predict', { 
+                const response = await fetch(' https://b371-2401-4900-6061-2677-4866-fb21-3fcd-f882.ngrok-free.app/predict', {  // Replace with your actual ngrok URL
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
